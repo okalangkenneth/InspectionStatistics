@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InspectionStatistics.Application\InspectionStatistics.Application.csproj" />
     <ProjectReference Include="..\InspectionStatistics.Infrastucture\InspectionStatistics.Infrastucture.csproj" />
     <ProjectReference Include="..\InspectionStatistics.Persistence\InspectionStatistics.Persistence.csproj" />
   </ItemGroup>

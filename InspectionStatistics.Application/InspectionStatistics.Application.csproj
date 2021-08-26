@@ -17,8 +17,4 @@
     <ProjectReference Include="..\InspectionStatistics.Domain\InspectionStatistics.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contracts\Persistence\Repositories\" />
-  </ItemGroup>
-
 </Project>

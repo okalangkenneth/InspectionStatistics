@@ -1,18 +1,17 @@
 ﻿using AutoMapper;
-using InspectionStatistics.Application.Features.Departments.Queries.GetCategoriesList;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsList;
 using InspectionStatistics.Application.Profiles;
 using InspectionStatistics.Application.UnitTests.Mocks;
 using InspectionStatistics.Domain.Contracts.Persistence;
+using InspectionStatistics.Domain.Entities;
 using Moq;
 using Shouldly;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using InspectionStatistics.Domain.Entities;
 
-namespace InspectionStatistics.Application.UnitTests.Department.Queries
+namespace InspectionStatistics.Application.UnitTests.StatusDepartments.Queries
 {
     public class GetDepartmentsListQueryHandlerTests
     {

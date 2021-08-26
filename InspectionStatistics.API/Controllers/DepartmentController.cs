@@ -1,5 +1,4 @@
 ﻿using InspectionStatistics.Application.Features.Departments.Commands.CreateDepartment;
-using InspectionStatistics.Application.Features.Departments.Queries.GetCategoriesList;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsList;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsListWithInspections;
 using MediatR;

@@ -3,21 +3,21 @@ using InspectionStatistics.Application.Features.Departments.Commands.CreateDepar
 using InspectionStatistics.Application.Profiles;
 using InspectionStatistics.Application.UnitTests.Mocks;
 using InspectionStatistics.Domain.Contracts.Persistence;
+using InspectionStatistics.Domain.Entities;
 using Moq;
 using Shouldly;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using InspectionStatistics.Domain.Entities;
 
-namespace InspectionStatistics.Application.UnitTests.Department.Commands
+namespace InspectionStatistics.Application.UnitTests.StatusDepartments.Commands
 {
-    public class CreateDepartmentTests
+    public class CreateDepartmentsTests
     {
         private readonly IMapper _mapper;
         private readonly Mock<IAsyncRepository<Department>> _mockDepartmentRepository;
 
-        public CreateDepartmentTests()
+        public CreateDepartmentsTests()
         {
             _mockDepartmentRepository = RepositoryMocks.GetDepartmentRepository();
             var configurationProvider = new MapperConfiguration(cfg =>
@@ -29,14 +29,14 @@ namespace InspectionStatistics.Application.UnitTests.Department.Commands
         }
 
         [Fact]
-        public async Task Handle_ValidDepartment_AddedToDepartmentsRepo()
+        public async Task Handle_ValidCategory_AddedToCategoriesRepo()
         {
             var handler = new CreateDepartmentCommandHandler(_mapper, _mockDepartmentRepository.Object);
 
-            await handler.Handle(new CreateDepartmentCommand() { Name = "Test" }, CancellationToken.None);
+            await handler.Handle(new CreateDepartmentCommand() { InspectionType = "Test" }, CancellationToken.None);
 
-            var allDepartments = await _mockDepartmentRepository.Object.ListAllAsync();
-            allDepartments.Count.ShouldBe(5);
+            var allCategories = await _mockDepartmentRepository.Object.ListAllAsync();
+            allCategories.Count.ShouldBe(5);
         }
     }
 }

@@ -20,29 +20,29 @@ namespace InspectionStatistics.Application.UnitTests.Mocks
                 new Department
                 {
                     DepartmentId = quantityControlGuid,
-                    Name = "Quality Controls"
+                    InspectionType = "Quality Controls"
                 },
                 new Department
                 {
                     DepartmentId = qualityControlGuid,
-                    Name = "Quality Controls"
+                    InspectionType = "Quality Controls"
                 },
                 new Department
                 {
                     DepartmentId = cleanlinessControlGuid,
-                    Name = "Cleanliness Controls"
+                    InspectionType = "Cleanliness Controls"
                 },
                  new Department
                 {
                     DepartmentId = pestControlGuid,
-                    Name = "Pest Controls"
+                    InspectionType = "Pest Controls"
                 }
             };
 
             var mockDepartmentRepository = new Mock<IAsyncRepository<Department>>();
             mockDepartmentRepository.Setup(repo => repo.ListAllAsync()).ReturnsAsync(departments);
 
-            mockDepartmentRepository.Setup(repo => repo.AddAsync(It.IsAny<department>())).ReturnsAsync(
+            mockDepartmentRepository.Setup(repo => repo.AddAsync(It.IsAny<Department>())).ReturnsAsync(
                 (Department department) =>
                 {
                     departments.Add(department);
