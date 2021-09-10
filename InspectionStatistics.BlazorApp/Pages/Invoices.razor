@@ -1,0 +1,61 @@
+﻿@page "/invoices"
+
+<h3 class="mb-5">Invoices</h3>
+
+<div class="row">
+    <div class="col-2">
+        <span>Select month</span>
+        <select class="form-control" @bind="@SelectedMonth">
+            <option value=""></option>
+            @foreach (var month in MonthList)
+            {
+                <option value="@month"> @month </option>
+            }
+        </select>
+    </div>
+    <div class="col-2">
+        <span>Select year</span>
+        <select class="form-control" @bind="@SelectedYear">
+            <option value=""></option>
+            @foreach (var year in YearList)
+            {
+                <option value="@year"> @year</option>
+            }
+        </select>
+    </div>
+</div>
+
+
+<button @onclick="GetInvoices" class="mt-4">Get Invoices</button>
+
+<br />
+
+@if (ordersList == null)
+{
+    <p><em>No data</em></p>
+}
+else
+{
+    <table class="invoices-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in ordersList)
+            {
+                <tr>
+                    <td>@order.OrderPlaced</td>
+                    <td>@order.OrderTotal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <InspectionStatistics.BlazorApp.Components.Pager PageIndex="@paginatedList.PageIndex" TotalPages=@paginatedList.TotalPages OnClick="PageIndexChanged"
+           HasNextPage=@paginatedList.HasNextPage HasPreviousPage=@paginatedList.HasPreviousPage>
+    </InspectionStatistics.BlazorApp.Components.Pager>
+
+}

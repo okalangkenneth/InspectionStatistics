@@ -1,0 +1,64 @@
+﻿ @page "/inspectiondetails"
+@page "/inspectiondetails/{inspectionid}"
+
+<h1 class="page-title">Details for @InspectionDetailViewModel.InspectionType</h1>
+
+@Message
+
+<EditForm Model="@InspectionDetailViewModel" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary></ValidationSummary>
+
+    <div class="form-group row">
+        <label for="inspection type" class="col-sm-3">Inspection type: </label>
+        <InputText id="inspection type" class="form-control col-sm-8" @bind-Value="@InspectionDetailViewModel.InspectionType" placeholder="Enter inspection type"></InputText>
+        <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => InspectionDetailViewModel.InspectionType)" />
+    </div>
+
+    <div class="form-group row">
+        <label for="price" class="col-sm-3">Invoice: </label>
+        <InputNumber id="phonenumber" class="form-control col-sm-8" @bind-Value="@InspectionDetailViewModel.Price" placeholder="Enter price"></InputNumber>
+        <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => InspectionDetailViewModel.Price)" />
+
+    </div>
+
+    <div class="form-group row">
+        <label for="client" class="col-sm-3">Client Name: </label>
+        <InputText id="client" class="form-control col-sm-8" @bind-Value="@InspectionDetailViewModel.Client" placeholder="Enter client"></InputText>
+        <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => InspectionDetailViewModel.Client)" />
+
+    </div>
+
+    <div class="form-group row">
+        <label for="date" class="col-sm-3">Inspection Date: </label>
+        <InputDate id="date" class="form-control col-sm-8" @bind-Value="@InspectionDetailViewModel.Date"></InputDate>
+    </div>
+
+    <div class="form-group row">
+        <label for="description" class="col-sm-3">Description: </label>
+        <InputTextArea id="description" class="form-control col-sm-8" @bind-Value="@InspectionDetailViewModel.Description" placeholder="Enter description"></InputTextArea>
+        <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => InspectionDetailViewModel.Description)" />
+    </div>
+
+    <div class="form-group row">
+        <label for="department" class="col-sm-3">Department: </label>
+        <InputSelect id="department" class="form-control col-sm-8" @bind-Value="@SelectedDepartmentId">
+            @foreach (var department in Departments)
+            {
+                <option value="@department.DepartmentId">@department.InspectionType</option>
+            }
+        </InputSelect>
+    </div>
+
+    <button type="submit" class="submit-button">Save inspection</button>
+   
+</EditForm>
+
+@if (SelectedInspectionId != Guid.Empty)
+{
+    <p>
+        <button @onclick="DeleteInspection" class="delete-button">Delete inspection</button>
+    </p>
+}
+<br />
+<p class="back-to-catalog mt-3"><img src="img/back-arrow.svg" /><a @onclick="@NavigateToOverview">Back to overview</a></p>

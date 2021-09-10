@@ -2,6 +2,7 @@
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsList;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsListWithInspections;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace InspectionStatistics.API.Controllers
             _mediator = mediator;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("all", Name = "GetAllDepartments")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<DepartmentListVm>>> GetAllDepartments()
@@ -29,7 +30,7 @@ namespace InspectionStatistics.API.Controllers
             return Ok(dtos);
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("allwithinspections", Name = "GetDepartmentsWithInspections")]
         [ProducesDefaultResponseType]
         [ProducesResponseType(StatusCodes.Status200OK)]

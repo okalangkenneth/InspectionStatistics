@@ -1,0 +1,44 @@
+﻿@page "/inspectionoverview"
+
+<h3>Inspection Overview</h3>
+
+<div class="m-2 d-flex justify-content-end">
+    <button @onclick="AddNewInspection" class="mr-1">Add Inspection</button>
+    <button @onclick="ExportInspections">Export Inspections</button>
+</div>
+
+
+
+@if (Inspections == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Inspection type</th>
+            <th>Inspection date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ins in Inspections)
+            {
+        <tr>
+            
+            <td class="inspection type">@ins.InspectionType </td>
+            <td class="inspection-date">@ins.Date.ToShortDateString() </td>
+            <td>
+                <a href="@($"inspectiondetails/{ins.InspectionId}")" class="inspection-order-button btn">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
+}
+

@@ -1,0 +1,57 @@
+﻿@page "/departmentoverview"
+
+<h3>Inspection Department Overview</h3>
+
+<br />
+
+<p><input class="custom-checkbox" type="checkbox" id="includeHistory" @onchange="OnIncludeHistoryChanged"/>   Include past inspections?</p>
+
+@if (Departments == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Department name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dep in Departments)
+            {
+                <tr>
+                    <td>@dep.InspectionType </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <table class="nested-table ml-auto mr-auto">
+                            <thead>
+                                <tr>
+                                    <th>Inspection Type</th>
+                                    <th class="department-inspection-header">Inspection Date</th>
+                                    <th class="department-inspection-header">Client</th>
+                                    <th class="department-inspection-header">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var ins in dep.Inspections)
+                                {
+                                    <tr>
+                                        <td class="Inspection-Inspection type">@ins.InspectionType </td>
+                                        <td class="inspection-date">@ins.Date.ToShortDateString() </td>
+                                        <td class="inspection-client">@ins.Client</td>
+                                        <td class="inspection-price">@ins.Price</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
