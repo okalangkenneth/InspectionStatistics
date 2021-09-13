@@ -116,15 +116,15 @@ td, th {
     border-bottom: 1px solid #cecfd5;
 }
 
-.event-image {
+/*.event-image {
     width: 200px;
     line-height: 12px;
-}
+}*/
 
-.event-date,
-.event-name,
-.event-artist,
-.event-price {
+.inspection-date,
+.inspection-inspectionType,
+.inspection-client,
+.inspection-price {
     color: #000;
     font-size: 14px;
     font-style: normal;
@@ -133,11 +133,11 @@ td, th {
     text-transform: capitalize;
 }
 
-.category-event-header {
+.department-inspection-header {
     width: 300px;
 }
 
-.event-purchase-button {
+.inspection-purchase-button {
     background: #51b5b1;
     color: #fff;
 }
@@ -146,7 +146,7 @@ td, th {
     width: 90%;
 }
 
-.back-to-catalog a {
+.back-to-department a {
     color: #51b5b1;
     font-size: 14px;
     font-weight: normal;
@@ -157,7 +157,7 @@ td, th {
 }
 
 @media only screen and (min-width: 992px) {
-    .ticket-sales-table {
+    .inspection-sales-table {
         width: 70%;
     }
 }
