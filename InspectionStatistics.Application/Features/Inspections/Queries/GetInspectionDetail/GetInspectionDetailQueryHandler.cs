@@ -1,13 +1,12 @@
 ﻿using AutoMapper;
 using InspectionStatistics.Application.Features.Inspections.GetInspectionDetail;
-using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionDetail;
 using InspectionStatistics.Domain.Contracts.Persistence;
 using InspectionStatistics.Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace InspectionStatistics.Application.Features.Inspections
+namespace InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionDetail
 {
     public class GetInspectionDetailQueryHandler : IRequestHandler<GetInspectionDetailQuery, InspectionDetailVm>
     {

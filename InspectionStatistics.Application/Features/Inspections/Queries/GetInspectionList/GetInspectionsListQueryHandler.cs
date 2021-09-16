@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using InspectionStatistics.Application.Features.Inspectons;
+using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionList;
+using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionsList;
 using InspectionStatistics.Domain.Contracts.Persistence;
 using InspectionStatistics.Domain.Entities;
 using MediatR;

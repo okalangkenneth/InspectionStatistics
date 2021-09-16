@@ -4,5 +4,6 @@ namespace InspectionStatistics.Application.Features.Inspections.Queries.GetInspe
 {
     public class GetInspectionsExportQuery: IRequest<InspectionExportFileVm>
     {
+
     }
 }

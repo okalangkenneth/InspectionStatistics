@@ -2,10 +2,10 @@
 using InspectionStatistics.Application.Features.Departments.Commands.CreateDepartment;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsList;
 using InspectionStatistics.Application.Features.Departments.Queries.GetDepartmentsListWithInspections;
-using InspectionStatistics.Application.Features.Inspections;
 using InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.UpdateInspection;
 using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionDetail;
+using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionList;
 using InspectionStatistics.Application.Features.Orders.GetOrdersForMonth;
 using InspectionStatistics.Domain.Entities;
 

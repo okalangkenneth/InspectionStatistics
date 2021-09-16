@@ -1,4 +1,5 @@
-﻿using InspectionStatistics.Application.Features.Inspections;
+﻿using InspectionStatistics.Api.Utility;
+using InspectionStatistics.Application.Features.Inspections;
 using InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.DeleteInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.UpdateInspection;
@@ -38,7 +39,7 @@ public class InspectionsController : Controller
     }
 
     [HttpGet("{id}", Name = "GetInspectionById")]
-    public async Task<ActionResult<InspectionDetailVm>> GetEventById(Guid id)
+    public async Task<ActionResult<InspectionDetailVm>> GetInspectionById(Guid id)
     {
         var getInspectionDetailQuery = new GetInspectionDetailQuery() { Id = id };
         return Ok(await _mediator.Send(getInspectionDetailQuery));
@@ -73,7 +74,7 @@ public class InspectionsController : Controller
     }
 
     [HttpGet("export", Name = "ExportInspections")]
-    //[FileResultContentType("text/csv")]
+    [FileResultContentType("text/csv")]
     public async Task<FileResult> ExportInspections()
     {
         var fileDto = await _mediator.Send(new GetInspectionsExportQuery());
