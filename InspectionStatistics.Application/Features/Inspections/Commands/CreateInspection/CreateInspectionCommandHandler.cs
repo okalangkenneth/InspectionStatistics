@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using InspectionStatistics.Application.Contracts.Infrastructure;
 using InspectionStatistics.Application.Contracts.Persistence;
-using InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection;
 using InspectionStatistics.Application.Models.Mail;
 using InspectionStatistics.Domain.Entities;
 using MediatR;
@@ -10,7 +9,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace InspectionStatistics.Application.Features.Inspections.Commands.CreateEvent
+namespace InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection
 {
     public class CreateInspectionCommandHandler : IRequestHandler<CreateInspectionCommand, Guid>
     {

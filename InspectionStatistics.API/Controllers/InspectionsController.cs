@@ -1,6 +1,6 @@
 ﻿using InspectionStatistics.Application.Features.Inspections;
 using InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection;
-using InspectionStatistics.Application.Features.Inspections.Commands.DeleteEvent;
+using InspectionStatistics.Application.Features.Inspections.Commands.DeleteInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.UpdateInspection;
 using InspectionStatistics.Application.Features.Inspections.GetInspectionDetail;
 using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionDetail;

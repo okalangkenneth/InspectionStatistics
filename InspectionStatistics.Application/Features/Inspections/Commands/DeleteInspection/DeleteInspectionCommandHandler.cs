@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using InspectionStatistics.Application.Exceptions;
-using InspectionStatistics.Application.Features.Inspections.Commands.DeleteEvent;
 using InspectionStatistics.Domain.Contracts.Persistence;
 using InspectionStatistics.Domain.Entities;
 using MediatR;

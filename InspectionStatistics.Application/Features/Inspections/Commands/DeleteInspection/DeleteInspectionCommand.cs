@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace InspectionStatistics.Application.Features.Inspections.Commands.DeleteEvent
+namespace InspectionStatistics.Application.Features.Inspections.Commands.DeleteInspection
 {
     public class DeleteInspectionCommand: IRequest
     {
