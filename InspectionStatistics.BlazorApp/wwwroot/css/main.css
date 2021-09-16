@@ -19,6 +19,25 @@ header {
     padding: 17px 37px;
 }
 
+.logo {
+    width: 240px;
+    height: 40px;
+    position: relative;
+}
+
+    .logo::before {
+        content: '';
+        position: absolute;
+        width: 240px;
+        height: 140px;
+        z-index: 1;
+        background-image: url(/InspectionStatistics.png);
+        left: -9px;
+        top: -100px;
+        background-size: cover;
+        background-repeat: no-repeat; /* Image is 500px by 500px, but only 200px by 50px is showing. */
+    }
+
     header h1 {
         margin: 0;
     }
