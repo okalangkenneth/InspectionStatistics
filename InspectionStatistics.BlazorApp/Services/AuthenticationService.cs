@@ -27,7 +27,7 @@ namespace InspectionStatistics.BlazorApp.Services
 
                 var authenticationResponse = await _client.AuthenticateAsync(authenticationRequest);
 
-                
+
 
                 if (authenticationResponse.Token != string.Empty)
                 {
@@ -64,3 +64,4 @@ namespace InspectionStatistics.BlazorApp.Services
         }
     }
 }
+

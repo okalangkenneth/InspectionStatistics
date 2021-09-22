@@ -1,12 +1,12 @@
 ﻿using InspectionStatistics.Api.Utility;
-using InspectionStatistics.Application.Features.Inspections;
 using InspectionStatistics.Application.Features.Inspections.Commands.CreateInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.DeleteInspection;
 using InspectionStatistics.Application.Features.Inspections.Commands.UpdateInspection;
 using InspectionStatistics.Application.Features.Inspections.GetInspectionDetail;
 using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionDetail;
+using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionList;
 using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionsExport;
-using InspectionStatistics.Application.Features.Inspectons;
+using InspectionStatistics.Application.Features.Inspections.Queries.GetInspectionsList;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

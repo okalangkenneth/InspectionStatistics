@@ -57,7 +57,6 @@ namespace InspectionStatistics.Persistence
                 Client = "John Egbert",
                 Date = DateTime.Now.AddMonths(6),
                 Description = "Join John for his farwell tour across 15 continents. John really needs no introduction since he has already mesmerized the world with his banjo.",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/banjo.jpg",
                 DepartmentId = quantityControlGuid
             });
 
@@ -69,7 +68,6 @@ namespace InspectionStatistics.Persistence
                 Client = "Michael Johnson",
                 Date = DateTime.Now.AddMonths(9),
                 Description = "Michael Johnson doesn't need an introduction. His 25 concert across the globe last year were seen by thousands. Can we add you to the list?",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/michael.jpg",
                 DepartmentId = quantityControlGuid
             });
 
@@ -81,7 +79,6 @@ namespace InspectionStatistics.Persistence
                 Client = "The Mike'",
                 Date = DateTime.Now.AddMonths(4),
                 Description = "DJs from all over the world will compete in this epic battle for eternal fame.",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/dj.jpg",
                 DepartmentId = quantityControlGuid
             });
 
@@ -93,7 +90,6 @@ namespace InspectionStatistics.Persistence
                 Client = "Manuel Santinonisi",
                 Date = DateTime.Now.AddMonths(4),
                 Description = "Get on the hype of Spanish Guitar concerts with Manuel.",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/guitar.jpg",
                 DepartmentId = qualityControlGuid
             });
 
@@ -105,7 +101,6 @@ namespace InspectionStatistics.Persistence
                 Client = "Many",
                 Date = DateTime.Now.AddMonths(10),
                 Description = "The best tech conference in the world",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/conf.jpg",
                 DepartmentId = pestControlGuid
             });
 
@@ -117,7 +112,6 @@ namespace InspectionStatistics.Persistence
                 Client = "Nick Sailor",
                 Date = DateTime.Now.AddMonths(8),
                 Description = "The critics are over the moon and so will you after you've watched this sing and dance extravaganza written by Nick Sailor, the man from 'My dad and sister'.",
-                //ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/GloboTicket/musical.jpg",
                 DepartmentId = cleanlinessControlGuid
             });
 

@@ -28,6 +28,7 @@ namespace InspectionStatistics.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             
             AddSwagger(services);
 
@@ -35,6 +36,7 @@ namespace InspectionStatistics.API
             services.AddInfrastructureServices(Configuration);
             services.AddPersistenceServices(Configuration);
             services.AddIdentityServices(Configuration);
+
 
             services.AddScoped<ILoggedInUserService, LoggedInUserService>();
 

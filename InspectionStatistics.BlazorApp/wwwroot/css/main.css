@@ -73,16 +73,16 @@ header {
 }
 
 .page-title {
-    color: #51B5B1;
+    color: #8696f3;
     font-size: 2rem;
 }
 
 button {
     background: rgba(81, 181, 177, 0.1);
-    border: 1px solid #51B5B1;
+    border: 1px solid #8696f3;
     border-radius: 30px;
     box-sizing: border-box;
-    color: #51b5b1;
+    color: #8696f3;
     font-size: 12px;
     font-weight: bold;
     height: 30px;
@@ -93,7 +93,7 @@ button {
 }
 
 .submit-button {
-    background: #51b5b1;
+    background: #8696f3;
     color: #fff;
 }
 
@@ -157,7 +157,7 @@ td, th {
 }
 
 .inspection-purchase-button {
-    background: #51b5b1;
+    background: #8696f3;
     color: #fff;
 }
 
@@ -166,7 +166,7 @@ td, th {
 }
 
 .back-to-department a {
-    color: #51b5b1;
+    color: #8696f3;
     font-size: 14px;
     font-weight: normal;
     line-height: 22px;
@@ -188,12 +188,12 @@ td, th {
 
 .pager-btn {
     width: 75px;
-    background: #51b5b1;
+    background: #8696f3;
     color: #fff;
 }
 
 .pager-btn-disabled {
     width: 75px;
     background: rgba(81, 181, 177, 0.1);
-    color: #51b5b1;
+    color: #8696f3;
 }
